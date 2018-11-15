@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace命名空间，用于设置当前接口映射文件是实现哪一个接口类-->
+<mapper namespace="com.it.dao.IUserDao">
+    <!--
+    select:代表实现查询操作
+    id：用于设置实现IUserDao接口中哪个方法
+    resultType:用于设置接口方法返回的类型
+    -->
+    <select id="findAll" resultType="com.it.entity.User">
+        select * from user
+    </select>
+</mapper>
